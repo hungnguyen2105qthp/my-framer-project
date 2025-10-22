@@ -1,0 +1,45 @@
+{
+  "processingConfig": {
+    "chains": [
+      {
+        "chainId": "Revive",
+        "locations": [
+          "Carmel Valley"
+        ]
+      }
+    ],
+    "options": {
+      "saveResults": true,
+      "includeEmbeddings": false,
+      "maxConcurrent": 3,
+      "delayBetweenProcessing": 2000
+    }
+  },
+  "targetStages": [
+    "Patient Interview & History",
+    "Aesthetic Goals Discovery", 
+    "Treatment Education & Knowledge",
+    "Previous Experience Review",
+    "Facial Assessment & Analysis",
+    "Treatment Planning & Options",
+    "Objection Handling & Concerns",
+    "Closing & Treatment Commitment"
+  ],
+  "openaiSettings": {
+    "model": "gpt-4o",
+    "temperature": 0,
+    "embeddingModel": "text-embedding-3-small",
+    "batchSize": 10,
+    "embeddingBatchSize": 500
+  },
+  "clusteringSettings": {
+    "minClusterSize": 5,
+    "similarityThreshold": 0.5,
+    "method": "cosine"
+  },
+  "dataSettings": {
+    "minSentenceLength": 5,
+    "maxResponseSize": 1000,
+    "sentenceBatchSize": 500
+  }
+}
